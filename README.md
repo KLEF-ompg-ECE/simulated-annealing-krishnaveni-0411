@@ -59,7 +59,7 @@ python sa_timetable.py
 
 | Metric | Your result |
 |--------|-------------|
-| Number of iterations completed | 139 |
+| Number of iterations completed | 1379 |
 | Clashes at iteration 1 | 12|
 | Final best clashes | 3|
 | Did SA reach 0 clashes? (Yes / No) | No |
@@ -95,9 +95,9 @@ Save plots as `experiment_2a.png`, `experiment_2b.png`, `experiment_2c.png`.
 
 | cooling_rate | Final clashes | Iterations completed | Reached 0 clashes? |
 |-------------|---------------|----------------------|--------------------|
-| 0.80        |               |                      |                    |
-| 0.95        |               |                      |                    |
-| 0.995       |               |                      |                    |
+| 0.80        |     8         |      31              |       NO           |
+| 0.95        |     3         |      135             |       NO           |
+| 0.995       |     3         |      1379            |       NO           |
 
 **Compare the three plots. What do you notice about how fast vs slow cooling affects the result? (3–4 sentences)**  
 *Hint: Fast cooling = temperature drops quickly. Does it have time to explore well?*
