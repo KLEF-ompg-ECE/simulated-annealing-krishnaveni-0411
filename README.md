@@ -59,20 +59,28 @@ python sa_timetable.py
 
 | Metric | Your result |
 |--------|-------------|
-| Number of iterations completed | |
-| Clashes at iteration 1 | |
-| Final best clashes | |
-| Did SA reach 0 clashes? (Yes / No) | |
+| Number of iterations completed | 139 |
+| Clashes at iteration 1 | 12|
+| Final best clashes | 3|
+| Did SA reach 0 clashes? (Yes / No) | No |
 
 **Copy the printed timetable output here:**
 ```
-[ PASTE TIMETABLE OUTPUT HERE ]
+Final Timetable
+------------------------------------------
+  Slot 1:  Geography
+  Slot 2:  Chemistry, English
+  Slot 3:  History, Computer Science, Economics
+  Slot 4:  Biology, Statistics
+  Slot 5:  Mathematics, Physics
+------------------------------------------
+  Total clashes : 3
 ```
 
 **Look at `plots/experiment_1.png` and describe what you see (2–3 sentences).**  
 *Where does the biggest drop in clashes happen? Does the curve flatten out?*
 ```
-[ YOUR OBSERVATION ]
+The plot shows a steep drop in clashes during the initial iterations, with the most significant improvements happening very early on. The curve then flattens out for the latter part.
 ```
 
 ---
