@@ -102,12 +102,13 @@ Save plots as `experiment_2a.png`, `experiment_2b.png`, `experiment_2c.png`.
 **Compare the three plots. What do you notice about how fast vs slow cooling affects the result? (3–4 sentences)**  
 *Hint: Fast cooling = temperature drops quickly. Does it have time to explore well?*
 ```
-[ YOUR OBSERVATION ]
+When the cooling rate is fast (0.80), the temperature drops to the minimum almost immediately (31 iterations). This gives the algorithm very little time to explore, causing it to get stuck in a local minimum with a high number of clashes (8). 
+Slower cooling rates (0.95 and 0.995) keep the temperature higher for longer, allowing for many more iterations (135 and 1379 respectively). This extended time allows the algorithm to escape local minima and find much better overall solutions.
 ```
 
 **Which cooling_rate gave the best result? Why do you think that is?**
 ```
-[ YOUR ANSWER ]
+ Both 0.95 and 0.995 tied for the lowest clashes (3), but 0.95 could be considered best overall because it found the same quality solution much faster (135 iterations vs 1379)
 ```
 
 ---
@@ -118,12 +119,12 @@ Save plots as `experiment_2a.png`, `experiment_2b.png`, `experiment_2c.png`.
 
 | Experiment | Key setting | Final clashes | Main finding in one sentence |
 |------------|-------------|---------------|------------------------------|
-| 1 — Baseline | cooling_rate = 0.995 | | |
-| 2 — Cooling rate | cooling_rate = ___ | | |
+| 1 — Baseline | cooling_rate = 0.995 | 3 | Slow cooling allows for thorough exploration and a low-clash final schedule. |
+| 2 — Cooling rate | cooling_rate = 0.95 | 3 | A moderately slow cooling rate finds the optimal solution much more efficiently than very slow cooling (0.995). |
 
 **In your own words — what is the most important thing you learned about Simulated Annealing from these experiments? (3–5 sentences)**
 ```
-[ YOUR REFLECTION ]
+The most important thing I learned about Simulated Annealing is the critical role of the cooling rate in balancing exploration and efficiency. If the temperature drops too quickly, the algorithm gets trapped in a local minimum with poor results. However, if it drops too slowly, it wastes computational time.
 ```
 
 ---
