@@ -1,9 +1,9 @@
 # Assignment 1 — Simulated Annealing: Exam Timetable Scheduling
 ## Observation Report
 
-**Student Name  :** ___________________________  
-**Student ID    :** ___________________________  
-**Date Submitted:** ___________________________  
+**Student Name  :** Krishnaveni Pola  
+**Student ID    :** 2310040013  
+**Date Submitted:** 16-03-2026  
 
 ---
 
@@ -23,13 +23,16 @@ Open `sa_timetable.py` and read through it. Then answer these questions.
 **Q1. What does `count_clashes()` measure? What value means a perfect timetable?**
 
 ```
-[ YOUR ANSWER — 2 to 3 sentences ]
+count_clashes() measures the number of clashes in the timetable. A clash occurs when a student has two exams assigned t same slot.
+A perfect timetable has no clashes. (clashes = 0)
 ```
 
 **Q2. What does `generate_neighbor()` do? How is the new timetable different from the current one?**
 
 ```
-[ YOUR ANSWER — 2 to 3 sentences ]
+generate_neighbor() function creates a new "neighbor" timetable, which is a slightly modified version of the current one. It randomly selects one exam and moves it to a new, different, randomly selected time slot.
+Helps us to explore different possible schedules.
+
 ```
 
 **Q3. In `run_sa()`, there is this line:**
@@ -39,7 +42,8 @@ if delta < 0 or random.random() < math.exp(-delta / T):
 **What does this line decide? Why does SA sometimes accept a worse solution?**
 
 ```
-[ YOUR ANSWER — 2 to 3 sentences ]
+This line decides whether to move to the newly generated timetable. If delta < 0, the new timetable is better (fewer clashes) and is always accepted. If it's worse, it is still accepted with a probability of math.exp(-delta / T). 
+This occasional acceptance of worse solutions allows the algorithm to escape local optima and explore the search space instead of getting stuck.
 ```
 
 ---
